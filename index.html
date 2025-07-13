@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebCraft - The Art of Websites</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid #fff;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #fff; }
+        }
+        .wave {
+            animation: wave 2s infinite;
+            transform-origin: 70% 70%;
+            display: inline-block;
+        }
+        @keyframes wave {
+            0% { transform: rotate(0deg); }
+            10% { transform: rotate(14deg); }
+            20% { transform: rotate(-8deg); }
+            30% { transform: rotate(14deg); }
+            40% { transform: rotate(-4deg); }
+            50% { transform: rotate(10deg); }
+            60% { transform: rotate(0deg); }
+            100% { transform: rotate(0deg); }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="#" class="flex items-center py-4 px-2">
+                            <i class="fas fa-globe text-purple-600 text-2xl mr-2"></i>
+                            <span class="font-semibold text-gray-900 text-lg">WebCraft</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="#home" class="py-4 px-2 text-purple-600 border-b-4 border-purple-600 font-semibold">Home</a>
+                    <a href="#about" class="py-4 px-2 text-gray-500 hover:text-purple-600 transition duration-300">About</a>
+                    <a href="#types" class="py-4 px-2 text-gray-500 hover:text-purple-600 transition duration-300">Types</a>
+                    <a href="#tech" class="py-4 px-2 text-gray-500 hover:text-purple-600 transition duration-300">Technologies</a>
+                    <a href="#contact" class="py-4 px-2 text-gray-500 hover:text-purple-600 transition duration-300">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button" onclick="toggleMenu()">
+                        <svg class="w-6 h-6 text-gray-500 hover:text-purple-600"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="hidden mobile-menu">
+            <ul>
+                <li><a href="#home" class="block text-sm px-2 py-4 text-white bg-purple-600 font-semibold">Home</a></li>
+                <li><a href="#about" class="block text-sm px-2 py-4 hover:bg-purple-600 hover:text-white transition duration-300">About</a></li>
+                <li><a href="#types" class="block text-sm px-2 py-4 hover:bg-purple-600 hover:text-white transition duration-300">Types</a></li>
+                <li><a href="#tech" class="block text-sm px-2 py-4 hover:bg-purple-600 hover:text-white transition duration-300">Technologies</a></li>
+                <li><a href="#contact" class="block text-sm px-2 py-4 hover:bg-purple-600 hover:text-white transition duration-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">The World of <span class="wave">🌐</span> Websites</h1>
+            <h2 class="typewriter text-xl md:text-2xl mb-8">Exploring the digital universe one site at a time</h2>
+            <button class="bg-white text-purple-600 font-bold rounded-full py-3 px-8 shadow-lg hover:bg-gray-100 transition duration-300 transform hover:scale-105">
+                Start Exploring
+            </button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">What is a Website?</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80" alt="Website concept" class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+                <div class="md:w-1/2">
+                    <p class="text-lg mb-6">
+                        A website is a collection of web pages and related content that is identified by a common domain name and published on at least one web server.
+                    </p>
+                    <p class="text-lg mb-6">
+                        Websites are typically dedicated to a particular topic or purpose, such as news, education, commerce, entertainment, or social networking.
+                    </p>
+                    <p class="text-lg mb-6">
+                        The first website was created in 1991 by Tim Berners-Lee, and since then, the web has grown to over 1.8 billion websites today!
+                    </p>
+                    <div class="bg-purple-100 border-l-4 border-purple-600 p-4">
+                        <p class="text-purple-800 italic">
+                            "The web does not just connect machines, it connects people." - Tim Berners-Lee
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Types of Websites -->
+    <section id="types" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">Types of Websites</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-500 card-hover">
+                    <div class="bg-purple-600 p-4 text-white">
+                        <i class="fas fa-shopping-cart text-3xl mb-2"></i>
+                        <h3 class="text-xl font-semibold">E-commerce</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 mb-4">
+                            Online stores that allow businesses to sell products or services directly to consumers.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Shopify</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">WooCommerce</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Magento</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-500 card-hover">
+                    <div class="bg-blue-600 p-4 text-white">
+                        <i class="fas fa-newspaper text-3xl mb-2"></i>
+                        <h3 class="text-xl font-semibold">News & Blogs</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 mb-4">
+                            Platforms for sharing information, opinions, and stories with a wide audience.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">WordPress</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Medium</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Ghost</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-500 card-hover">
+                    <div class="bg-green-600 p-4 text-white">
+                        <i class="fas fa-laptop-code text-3xl mb-2"></i>
+                        <h3 class="text-xl font-semibold">Portfolio</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 mb-4">
+                            Showcase of an individual's or company's work, skills, and achievements.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Behance</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Dribbble</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Personal Site</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="tech" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">Website Technologies</h2>
+            <div class="flex flex-col md:flex-row items-center mb-16">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h3 class="text-2xl font-semibold mb-4">Frontend Development</h3>
+                    <p class="text-gray-700 mb-6">
+                        The part of a website that users interact with directly. It includes everything that users experience visually.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-white p-4 rounded-lg shadow-md text-center w-24">
+                            <i class="fab fa-html5 text-4xl text-orange-500 mb-2"></i>
+                            <span class="text-sm font-medium">HTML</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md text-center w-24">
+                            <i class="fab fa-css3-alt text-4xl text-blue-500 mb-2"></i>
+                            <span class="text-sm font-medium">CSS</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md text-center w-24">
+                            <i class="fab fa-js text-4xl text-yellow-500 mb-2"></i>
+                            <span class="text-sm font-medium">JavaScript</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md text-center w-24">
+                            <i class="fab fa-react text-4xl text-blue-400 mb-2"></i>
+                            <span class="text-sm font-medium">React</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4">Backend Development</h3>
+                    <p class="text-gray-700 mb-6">
+                        The server-side of a website that stores and arranges data, and ensures everything on the client-side works.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-white p-4 rounded-lg shadow-md text-center w-24">
+                            <i class="fab fa-node text-4xl text-green-600 mb-2"></i>
+                            <span class="text-sm font-medium">Node.js</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md text-center w-24">
+                            <i class="fas fa-database text-4xl text-blue-600 mb-2"></i>
+                            <span class="text-sm font-medium">SQL</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md text-center w-24">
+                            <i class="fab fa-python text-4xl text-blue-300 mb-2"></i>
+                            <span class="text-sm font-medium">Python</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md text-center w-24">
+                            <i class="fab fa-php text-4xl text-purple-500 mb-2"></i>
+                            <span class="text-sm font-medium">PHP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-xl p-8 max-w-4xl mx-auto">
+                <h3 class="text-2xl font-semibold mb-6 text-center">Website Development Process</h3>
+                <div class="relative">
+                    <!-- Timeline -->
+                    <div class="border-l-2 border-purple-600 absolute h-full left-4 top-0"></div>
+                    
+                    <!-- Timeline Item 1 -->
+                    <div class="mb-8 ml-12 relative">
+                        <div class="absolute w-8 h-8 bg-purple-600 rounded-full -left-12 border-4 border-white flex items-center justify-center">
+                            <span class="text-white font-bold">1</span>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Planning</h4>
+                        <p class="text-gray-700">Define purpose, target audience, and content structure.</p>
+                    </div>
+                    
+                    <!-- Timeline Item 2 -->
+                    <div class="mb-8 ml-12 relative">
+                        <div class="absolute w-8 h-8 bg-purple-600 rounded-full -left-12 border-4 border-white flex items-center justify-center">
+                            <span class="text-white font-bold">2</span>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Design</h4>
+                        <p class="text-gray-700">Create wireframes and visual mockups of the website.</p>
+                    </div>
+                    
+                    <!-- Timeline Item 3 -->
+                    <div class="mb-8 ml-12 relative">
+                        <div class="absolute w-8 h-8 bg-purple-600 rounded-full -left-12 border-4 border-white flex items-center justify-center">
+                            <span class="text-white font-bold">3</span>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Development</h4>
+                        <p class="text-gray-700">Write code to build the frontend and backend of the site.</p>
+                    </div>
+                    
+                    <!-- Timeline Item 4 -->
+                    <div class="mb-8 ml-12 relative">
+                        <div class="absolute w-8 h-8 bg-purple-600 rounded-full -left-12 border-4 border-white flex items-center justify-center">
+                            <span class="text-white font-bold">4</span>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Testing</h4>
+                        <p class="text-gray-700">Check for bugs and ensure compatibility across devices.</p>
+                    </div>
+                    
+                    <!-- Timeline Item 5 -->
+                    <div class="ml-12 relative">
+                        <div class="absolute w-8 h-8 bg-purple-600 rounded-full -left-12 border-4 border-white flex items-center justify-center">
+                            <span class="text-white font-bold">5</span>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Launch</h4>
+                        <p class="text-gray-700">Deploy the website to a live server for public access.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold mb-2" id="websiteCount">0</div>
+                    <div class="text-xl">Websites Online</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2" id="userCount">0</div>
+                    <div class="text-xl">Internet Users</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2" id="mobileCount">0</div>
+                    <div class="text-xl">Mobile Users</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl font-bold text-center mb-16">Get In Touch</h2>
+            <div class="bg-white rounded-lg shadow-xl overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-purple-600 text-white p-10">
+                        <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-envelope mr-4"></i>
+                            <span>contact@webcraft.com</span>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-phone mr-4"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-map-marker-alt mr-4"></i>
+                            <span>123 Web Street, Internet City</span>
+                        </div>
+                        <div class="mt-8">
+                            <h4 class="text-xl font-semibold mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-white hover:text-gray-200"><i class="fab fa-facebook-f text-xl"></i></a>
+                                <a href="#" class="text-white hover:text-gray-200"><i class="fab fa-twitter text-xl"></i></a>
+                                <a href="#" class="text-white hover:text-gray-200"><i class="fab fa-instagram text-xl"></i></a>
+                                <a href="#" class="text-white hover:text-gray-200"><i class="fab fa-linkedin-in text-xl"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-10">
+                        <form>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
+                                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Your Name">
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+                                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Your Email">
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Message</label>
+                                <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" rows="4" placeholder="Your Message"></textarea>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <button class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-300" type="button">
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <h3 class="text-xl font-semibold mb-4">WebCraft</h3>
+                    <p class="text-gray-400 max-w-xs">
+                        Exploring the fascinating world of websites, their technologies, and their impact on our digital lives.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Explore</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                            <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">About</a></li>
+                            <li><a href="#types" class="text-gray-400 hover:text-white transition duration-300">Types</a></li>
+                            <li><a href="#tech" class="text-gray-400 hover:text-white transition duration-300">Technologies</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Blog</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Tutorials</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Documentation</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Webinars</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">
+                    &copy; 2023 WebCraft. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const menu = document.querySelector('.mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Animated counters
+        function animateCounter(elementId, target, duration = 2000) {
+            const element = document.getElementById(elementId);
+            const start = 0;
+            const increment = target / (duration / 16);
+            let current = start;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    clearInterval(timer);
+                    current = target;
+                }
+                element.textContent = Math.floor(current).toLocaleString();
+            }, 16);
+        }
+
+        // Start counters when stats section is in view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter('websiteCount', 1800000000);
+                    animateCounter('userCount', 5000000000);
+                    animateCounter('mobileCount', 4200000000);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const statsSection = document.querySelector('.gradient-bg');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                const mobileMenu = document.querySelector('.mobile-menu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
